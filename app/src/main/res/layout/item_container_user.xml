@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="5dp">
+    
+    <TextView
+        android:id="@+id/textFirstChar"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:background="@drawable/background_user_icon"
+        android:fontFamily="@font/ubuntubold"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:textAllCaps="true"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/viewDivider"/>
+
+    <View
+        android:id="@+id/viewSupporter"
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textFirstChar"
+        app:layout_constraintStart_toEndOf="@+id/textFirstChar"
+        app:layout_constraintTop_toTopOf="@+id/textFirstChar"/>
+
+    <ImageView
+        android:id="@+id/imageVideoMeeting"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:padding="2dp"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/baseline_videocam_24"
+        app:tint="@color/purple_500"
+        app:layout_constraintBottom_toTopOf="@+id/viewDivider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <ImageView
+        android:id="@+id/imageAudioMeeting"
+        android:layout_width="27dp"
+        android:layout_height="27dp"
+        android:layout_marginEnd="8dp"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/call_24"
+        app:tint="@color/purple_500"
+        app:layout_constraintBottom_toTopOf="@+id/viewDivider"
+        app:layout_constraintEnd_toStartOf="@+id/imageVideoMeeting"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/textUsername"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:ellipsize="end"
+        android:fontFamily="@font/ubuntumedium"
+        android:maxLines="1"
+        android:textColor="@color/teal_200"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toTopOf="@+id/viewSupporter"
+        app:layout_constraintEnd_toStartOf="@+id/imageAudioMeeting"
+        app:layout_constraintStart_toEndOf="@+id/textFirstChar"
+        />
+    
+    <TextView
+        android:id="@+id/textEmail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:ellipsize="end"
+        android:fontFamily="@font/ubunturegular"
+        android:maxLines="1"
+        android:textColor="@color/teal_700"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toStartOf="@id/imageAudioMeeting"
+        app:layout_constraintStart_toEndOf="@id/textFirstChar"
+        app:layout_constraintTop_toBottomOf="@+id/viewSupporter"
+        />
+
+    <View
+        android:id="@+id/viewDivider"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:background="@color/purple_700"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textFirstChar"
+        app:layout_constraintTop_toBottomOf="@+id/textFirstChar"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
